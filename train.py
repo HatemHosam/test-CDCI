@@ -48,4 +48,6 @@ with open("metrics.txt", 'w') as outfile:
 y_pred = regr.predict(X_test)
 plt.scatter(X_test, y_test, color ='b')
 plt.plot(X_test, y_pred, color ='k')
-plt.show()
+plt.tight_layout()
+plt.savefig("feature_importance.png",dpi=120) 
+plt.close()
