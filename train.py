@@ -43,3 +43,9 @@ test_score = regr.score(X_test, y_test) * 100
 with open("metrics.txt", 'w') as outfile:
         outfile.write("Training variance explained: %2.1f%%\n" % train_score)
         outfile.write("Test variance explained: %2.1f%%\n" % test_score)
+
+# Data scatter of predicted values
+y_pred = regr.predict(X_test)
+plt.scatter(X_test, y_test, color ='b')
+plt.plot(X_test, y_pred, color ='k')
+plt.show()
